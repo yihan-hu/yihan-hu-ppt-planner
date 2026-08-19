@@ -1,3 +1,8 @@
+---
+name: ppt-planner
+description: Plan academic and scientific PowerPoint presentations before slide production, especially epidemiology and clinical research. Use when turning papers, protocols, results, figures, or incomplete study materials into a scientifically grounded, production-ready storyboard; prioritizing evidence; synthesizing conflicting designs or estimands; planning replication, decomposition, or sensitivity findings; deciding main versus backup content; specifying presentation-facing statistical model details; or preparing a content-complete handoff for Academic PPT or another slide-building workflow. Produce the scientific plan and slide-ready content, not a finished PPTX.
+---
+
 # PPT Planner
 
 ## Objective
