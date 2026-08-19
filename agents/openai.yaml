@@ -1,0 +1,12 @@
+interface:
+  display_name: PPT Planner
+  short_description: Plan scientific PPT stories and evidence
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
