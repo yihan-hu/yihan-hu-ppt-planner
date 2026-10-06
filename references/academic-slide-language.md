@@ -28,19 +28,36 @@ Use short, neutral, descriptive titles or noun phrases by default. Common forms 
 - `Strengths and limitations`
 - `Conclusion`
 
-A short qualifier after a colon is acceptable when it identifies the analysis, population, or outcome.
+For teaching or conceptual talks, neutral example/navigation titles are also appropriate:
+
+- `Why do we need agent skills?`
+- `A simple example`
+- `Prompt v1 -> v4`
+- `What goes wrong?`
+- `What is an agent skill?`
+- `Codex: fixing a failing test`
+- `Workflow`
+- `When is the task finished?`
+- `A repeated-step problem`
+- `A more engineered solution`
+- `Another solution`
+- `When should we hard-control?`
+
+A short qualifier after a colon is acceptable when it identifies the analysis, case, population, or outcome.
 
 ## 2. Separate title from interpretation
 
 Do not make the title carry the slide's conclusion by default. A result slide titled `Primary results` may show HRs near 1.0 without being titled `Both target trials were null`. A treatment-state slide may be titled `Design 3: three-state analysis` without being titled `Discontinuation explains the protective effect`.
 
+For case-driven teaching, do not title the slide with the lesson before the audience has seen the case. Prefer `A repeated-step problem` over `More control is not always better`; prefer `A more engineered solution` over `GPT over-engineers`; prefer `Prompt v1 -> v4` over `Skill is not a long prompt`.
+
 Place interpretation in one of these locations instead:
 
-- the figure or table itself;
+- the figure, table, prompt example, or case sequence itself;
 - a concise objective caption;
 - a short result sentence below the figure;
 - the spoken narrative;
-- a dedicated `Discussion` or `Interpretation` slide;
+- a dedicated `Discussion`, `Interpretation`, or `Wrap-up` slide;
 - the final `Conclusion`.
 
 ## 3. Methods wording
@@ -88,6 +105,7 @@ The following are internal planning concepts and should not be copied into visib
 - `this slide should convince the audience...`
 - instructions to the presenter
 - comments about why a slide was included
+- meta-framing such as `this is an intuition shift` or `this is not a feature introduction`
 
 Use these concepts to plan the deck, not to write the deck.
 
@@ -98,7 +116,8 @@ Use declarative or claim-style titles only when at least one is true:
 - the user explicitly asks for claim/headline titles;
 - the talk is intentionally keynote/editorial/consulting style rather than a conventional academic presentation;
 - a single synthesis or conclusion slide benefits from a concise statement;
-- the source presentation already uses that convention and the user wants it preserved.
+- the source presentation already uses that convention and the user wants it preserved;
+- the case/example has already been shown and the title is now a recap, not a reveal.
 
 Even then, keep claims scientifically calibrated and source-supported.
 
@@ -106,8 +125,9 @@ Even then, keep claims scientifically calibrated and source-supported.
 
 Before finalizing a storyboard, ask:
 
-- Would these titles look normal in a clinical/epidemiology seminar or conference talk?
+- Would these titles look normal in a clinical/epidemiology seminar, methods lecture, or group meeting?
 - Are titles describing slide content rather than selling an interpretation?
 - Has any internal planning note leaked into visible slide copy?
 - Are methods phrased as procedures and results phrased as observations?
-- Is interpretation concentrated in Discussion/Conclusion rather than spread across every title?
+- For teaching slides, does the title name what the audience is looking at rather than the conclusion they should eventually reach?
+- Is interpretation concentrated in Discussion/Conclusion/Wrap-up rather than spread across every title?
