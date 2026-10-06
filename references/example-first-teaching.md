@@ -12,6 +12,29 @@ Preferred sequence:
 
 This is especially useful when the concept is unfamiliar, such as confounding, interaction, odds ratio, metadata boundaries, progressive disclosure, state machine, or lifecycle management.
 
+## Case fidelity rule
+
+A case is not a label. A useful teaching case must preserve enough concrete sequence for the audience to experience the problem.
+
+Do not replace a case with a summary such as:
+
+- `Prompt gets too long`;
+- `GPT over-engineers`;
+- `Every bug becomes a rule`;
+- `More control is not always better`.
+
+Instead, plan the story beat explicitly:
+
+1. What was the original task?
+2. What did the user/model try first?
+3. What exactly failed?
+4. What patch or attempted solution followed?
+5. What new problem did that create?
+6. What reframing or better solution resolved it?
+7. Only then, what concept or general rule should be named?
+
+If these steps are the point of the slide, mark them as a protected sequence in the production handoff. The slide builder may split the sequence across slides, but must not compress it into an abstract label, slogan, or decorative pipeline.
+
 ## Planning behavior
 
 For each major concept, ask:
@@ -21,6 +44,7 @@ For each major concept, ask:
 - What should feel surprising, wrong, or incomplete before the concept is introduced?
 - What is the smallest definition needed after the example?
 - What general rule should the audience remember?
+- Which concrete steps of the example must remain visible or spoken in order, rather than being replaced by a takeaway?
 
 Do not default to `definition -> theory -> example` unless the audience already knows the field or the concept is only a minor prerequisite.
 
@@ -70,6 +94,24 @@ Example structure:
 
 `Put all instructions in SKILL.md -> the file becomes huge -> the critical rule loses salience -> progressive disclosure -> but references are passive -> activation conditions are needed.`
 
+### Pattern D: failure-case driven skill design
+
+Use when the point is an agent/skill design lesson learned from practice:
+
+1. show the actual task or request;
+2. show the first natural prompt or skill instruction;
+3. show the concrete bad output or repeated behavior;
+4. show the first patch;
+5. show how patching starts to accumulate;
+6. show the heavier architecture that looks tempting;
+7. ask what problem actually needs to be solved;
+8. show the smaller semantic instruction or boundary rule;
+9. name the design principle.
+
+Example structure:
+
+`Skill repeats a completed step -> add one rule -> edge case remains -> GPT proposes state machine/validator/retry/fallback -> architecture becomes heavy -> real need is to check whether the step is already complete -> one semantic instruction may be enough.`
+
 ## On-slide style
 
 Keep visible slide text simple and mostly descriptive. The slide should show the example, contrast, table, diagram, or failure. The concept name can appear only after the problem is visible.
@@ -81,12 +123,17 @@ Prefer titles such as:
 - `Why this matters`
 - `Now we can define...`
 - `The general rule`
+- `A repeated-step problem`
+- `A more engineered solution`
+- `Another solution`
 
 Avoid starting a beginner-facing section with titles such as:
 
 - `Definition of progressive disclosure`
 - `Formal lifecycle semantics`
 - `Theoretical motivation`
+- `More control is not always better`
+- `A paradigm shift in agent design`
 
 unless the audience already needs that level of abstraction.
 
