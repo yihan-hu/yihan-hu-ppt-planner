@@ -109,7 +109,26 @@ The following are internal planning concepts and should not be copied into visib
 
 Use these concepts to plan the deck, not to write the deck.
 
-## 6. When claim titles are acceptable
+## 6. Internal aphorisms are not automatically slide copy
+
+Short planning rules can be useful internally and still be too abstract for the audience. Do not promote an internal slogan to visible slide text merely because it is concise.
+
+Examples of useful internal compression that may need audience-facing translation:
+
+- `Use machinery for invariants; use judgment for judgment.`
+- `Mutation invalidates evidence.`
+- `More context != more attention.`
+- `Complexity should be earned.`
+
+For an unfamiliar audience, prefer concrete wording tied to an example:
+
+- `Use hard checks for things that can be verified exactly. Use model or human review for things that require interpretation.`
+- `The code changed after the review passed, so the old PASS may no longer apply.`
+- `A rule can be in a long context and still be missed when it is buried.`
+
+The same rule applies to technical nouns. Do not put `binding`, `invariant`, `lifecycle`, `runtime`, `gate`, or similar terms on a slide before the audience has enough concrete context to understand what the term names.
+
+## 7. When claim titles are acceptable
 
 Use declarative or claim-style titles only when at least one is true:
 
@@ -121,13 +140,14 @@ Use declarative or claim-style titles only when at least one is true:
 
 Even then, keep claims scientifically calibrated and source-supported.
 
-## 7. Audit
+## 8. Audit
 
 Before finalizing a storyboard, ask:
 
 - Would these titles look normal in a clinical/epidemiology seminar, methods lecture, or group meeting?
 - Are titles describing slide content rather than selling an interpretation?
-- Has any internal planning note leaked into visible slide copy?
+- Has any internal planning note or aphorism leaked into visible slide copy without being translated for the audience?
+- Has an unfamiliar technical term been named before the slide shows the concrete problem/action it refers to?
 - Are methods phrased as procedures and results phrased as observations?
 - For teaching slides, does the title name what the audience is looking at rather than the conclusion they should eventually reach?
 - Is interpretation concentrated in Discussion/Conclusion/Wrap-up rather than spread across every title?
