@@ -36,43 +36,136 @@ If the user changes the scientific framing, teaching sequence, conclusion, or au
 
 If the user provides an old deck, transcript, script, or speaker notes, treat it as the primary style reference.
 
-Sample representative notes from:
+Sample representative material from:
 
 - one background or motivation slide;
 - one methods or technical explanation slide;
 - one results, discussion, or wrap-up slide.
 
-Infer and preserve the speaker's explanatory behavior, not just vocabulary:
+Infer and preserve explanatory behavior, not just vocabulary:
 
 - sentence length;
-- frequency of `we`;
+- average ideas per sentence;
 - preferred connectors;
 - amount of numerical detail;
 - directness versus polish;
-- whether the speaker naturally says `so`, `now`, `first`, `then`, `next`, `however`, `we can see`, or similar phrases;
-- whether complex reasoning is explained step by step rather than compressed into a polished summary.
+- whether slide wording is repeated directly;
+- how much presentation-management language is used;
+- whether complex reasoning is explained one step at a time;
+- how much abstraction is introduced before an example.
 
-Correct grammar when it affects clarity or professionalism, but do not automatically rewrite the speaker into highly polished native-speaker rhetoric.
+Correct grammar when it affects clarity or professionalism, but do not rewrite the speaker into polished keynote, consulting, or manuscript prose.
+
+## Draft beats before slides
+
+Do not independently write a self-contained mini-script for every slide.
+
+For any multi-slide teaching or reasoning beat:
+
+1. Write the whole spoken passage as one continuous explanation.
+2. Identify where the visual slide changes naturally.
+3. Split the passage across the slide notes.
+4. Keep the unresolved question at the end of one slide when the next slide answers it.
+5. Only summarize at the end of the beat when a summary is genuinely useful.
+
+A middle slide usually does **not** need its own introduction, explanation, and takeaway.
+
+Before accepting a slide boundary, ask:
+
+- What has the audience just heard?
+- What remains unresolved?
+- Does the next sentence directly continue that reasoning?
+- Am I restarting the topic only because the slide changed?
+
+## Semantic granularity
+
+Do not calibrate style only by word count.
+
+A note may be long when it contains a real derivation, example, calculation, definition, or sequence of reasoning. A short note may still feel verbose if several sentences only frame, qualify, recap, or manage the presentation.
+
+Prefer sentences that add at least one of:
+
+- a factual detail;
+- an example;
+- a calculation or reasoning step;
+- a definition;
+- a causal or logical relation;
+- a necessary caveat;
+- a direct transition to the next unresolved point.
+
+Minimize sentences whose only job is to announce structure, such as `The question is...`, `The main point is...`, `What matters here is...`, or `This slide shows...`.
+
+For a simple conceptual slide, a useful default is one short transition plus 2-4 content sentences. Expand only when the content itself needs more explanation.
+
+## Directly speakable language
+
+Speaker notes must sound like sentences the researcher could say aloud without translating them mentally.
+
+Do not narrate the presentation as an object. Avoid stage-direction language such as:
+
+- `It says...`
+- `On the slide...`
+- `The phrase here is...`
+- `The box on the left shows...`
+- `As you can see from this slide...`
+
+Prefer the content itself:
+
+> Suppose I ask the Agent to add a sensitivity analysis.
+
+It is fine to orient the audience to a figure, table, or code region when location matters, for example `Look at the upper rows first` or `In the previous code, the object is eligible_cohort`.
+
+## Avoid forced framing and forced closure
+
+Do not use a repeated formula in which every slide starts with a thesis sentence and ends with a takeaway sentence.
+
+Use these patterns sparingly, not as default templates:
+
+- `The main point is...`
+- `The key point is...`
+- `The question is...`
+- `A natural reaction is...`
+- `What matters here is...`
+- `This slide answers...`
+- `The main takeaway is...`
+
+Also avoid defensive `not X, but Y` constructions unless there is a real misconception to correct.
+
+## Do not invent rhetorical causality
+
+A smooth transition is not enough; the conceptual relation must be true.
+
+Do not write language that makes mechanism B sound like the solution to failure A unless it actually is.
+
+For example:
+
+- buried or overloaded context -> context design / activation;
+- genuinely multi-step work -> staged workflow / plan-execute;
+- ignored mechanically checkable rule -> gate;
+- earlier PASS invalidated by later change -> lifecycle / freshness.
+
+If the next slide introduces a separate problem, say so simply.
 
 ## Yihan-style explanatory anchor when a similar deck is provided
 
-When the user provides a deck with speaker notes similar to the `Statistics in observational studies` style, preserve this speaking pattern:
+When the user provides a deck with notes similar to the `Statistics in observational studies` style, preserve this speaking pattern:
 
-- start sections with a simple question, for example `So let's start with...` or `Now let's talk about...`;
-- introduce examples before definitions when teaching a concept;
 - use short spoken sentences;
 - move one reasoning step at a time;
-- use explicit navigation such as `First`, `Second`, `Third`, `Now`, `Then`, `However`, and `So`;
-- orient the audience before giving numbers, formulas, or a table;
+- introduce examples before formal definitions when teaching an unfamiliar concept;
+- use simple connectors such as `So`, `Now`, `First`, `Then`, and `However` only when they sound natural;
+- orient the audience before a formula, table, or code comparison;
 - repeat the same technical noun when needed instead of forcing synonym variation;
-- explain derivations sequentially, for example `Now let's calculate...`, `If we take the ratio...`, `So the key point is...`;
-- keep slide text concise and let the notes carry the reasoning chain.
+- keep the language close to the visible slide text when that helps the audience follow;
+- allow a slide to end without a recap when the next slide continues the same beat.
 
-This style is clear, direct, and researcher-like. Do not replace it with consulting, keynote, or manuscript prose.
+This style is direct and researcher-like. Do not replace it with consulting, keynote, or manuscript prose.
 
-Prefer:
+Prefer a continuous two-slide beat such as:
 
-> So at first, the solution looks very simple. If these instructions are important, why don't we just put everything into SKILL.md? But then we get another problem. The file becomes very long. The model can technically see all the instructions, but that does not mean every instruction gets the same attention. So the key point is: more context does not automatically mean more attention.
+> The prompt already says to use the previous code and not invent variable names. In the previous block, the object is eligible_cohort. But the next block switches to cohort_df.
+>
+> Why can this still happen? The model is following the task, the previous code, and several instructions at the same time. Adding more instructions makes the prompt longer, but the important rule can still be buried.
 
 Avoid:
 
@@ -96,7 +189,9 @@ Prefer:
 - `We observed...`
 - `So this suggests...`
 
-Keep one or two ideas per sentence. Use abstract terms such as `estimand`, `framework`, `triangulation`, `coherence`, `invariant`, or `lifecycle` only when the talk genuinely needs them, and define them from an example first when the audience is unfamiliar.
+Keep one or two ideas per sentence. Use abstract terms such as `estimand`, `framework`, `triangulation`, `coherence`, `invariant`, `runtime`, `gate`, or `lifecycle` only when the talk genuinely needs them.
+
+For an unfamiliar term, show the concrete problem, action, or process first when possible, then name the concept. A term should earn its name.
 
 Avoid unnecessary manuscript-style upgrades such as:
 
@@ -187,19 +282,49 @@ Avoid unsupported wording:
 
 For post-discontinuation or treatment-state analyses, distinguish an observed association from the causal effect of stopping treatment unless the design supports that causal interpretation.
 
-## Slide text and notes must complement each other
+## Lexical alignment with slide text
 
-Do not turn the notes into a spoken copy of the slide.
+Use the same important nouns, labels, variables, and comparison terms that appear on the slide.
 
-The slide should carry what the audience needs to see, compare, or remember. The notes should carry:
+If the slide compares `eligible_cohort` with `cohort_df`, the notes should normally say those names directly. Do not replace clear visible terms with a second layer of abstraction unless the abstraction is itself being taught.
+
+When visible slide copy is already clear and speakable, reading it directly or closely paraphrasing it is often better than inventing another formulation.
+
+This does **not** mean reading every visible bullet or table row. Repeat what helps the audience track the explanation; omit what they can read without help.
+
+## Slide text and notes should work together
+
+Do not mechanically read every visible word. But also do not paraphrase clear slide text just to make the notes sound different.
+
+The slide should carry what the audience needs to see, compare, or remember. The notes should add only what helps the audience understand the reasoning:
 
 - rationale;
-- interpretation;
+- sequence;
 - selected numerical emphasis;
+- interpretation;
 - caveats;
-- transitions that help the audience follow the scientific logic.
+- a necessary transition.
 
-If a table contains ten rows, the notes may mention only two or three.
+If a table contains ten rows, the notes may mention only two or three. If a slide contains one clear definition and three criteria, the notes may simply read or closely paraphrase those criteria and add a short explanation.
+
+## Planner language is not automatically speaker language
+
+Internal planning aphorisms, labels, and compression devices should not automatically become audience-facing notes.
+
+Examples that may be useful internally but can be too abstract for beginners include:
+
+- `Use machinery for invariants; use judgment for judgment.`
+- `Mutation invalidates evidence.`
+- `More context != more attention.`
+- `Complexity should be earned.`
+
+Translate them into concrete speech unless the audience already understands the abstraction. For example:
+
+> Use hard checks for things that can be verified exactly. Use model or human review for things that require interpretation.
+
+or:
+
+> The code changed after the review passed, so the old PASS may no longer apply.
 
 ## Handoff rule to slide-building workflows
 
@@ -214,13 +339,28 @@ A slide-building skill may:
 A slide-building skill should not:
 
 - rewrite the scientific scope;
-- change the relationship between designs;
+- change the relationship between designs or mechanisms;
 - add a new explanation for discordant results;
-- weaken an intentional tension by saying results are incomparable because estimands differ;
+- invent a causal link between adjacent teaching beats;
 - strengthen the causal interpretation;
 - replace the user's speaking style with generic polished prose.
 
 If slide order or scientific content changes materially during production, return to the canonical planner story and regenerate the affected notes.
+
+## Speaker Language and Granularity Audit
+
+Before delivery, ask all of the following:
+
+1. **Directly speakable**: Could the speaker say every sentence naturally, or does any line describe the slide rather than the subject?
+2. **Continuous across slides**: Were multi-slide beats drafted as continuous speech, or does every slide restart with a new mini-introduction?
+3. **No forced framing/closure**: Are there repeated `main point`, `key point`, `question is`, `natural reaction`, or unnecessary `not X, but Y` constructions?
+4. **High semantic density**: Does each sentence advance content, reasoning, evidence, or interpretation rather than merely manage the presentation?
+5. **Lexically aligned**: Do the notes use the same important terms, labels, values, and object names the audience sees?
+6. **Concrete before abstract**: Does an unfamiliar technical term appear only after the audience has seen the example, action, or problem it names?
+7. **True transition logic**: Does every causal-sounding transition reflect a real conceptual relation rather than rhetorical smoothness?
+8. **Appropriate repetition**: Are clear slide phrases repeated when useful, while unnecessary full-slide reading is avoided?
+9. **Style fidelity**: Does the note preserve the user's own academic speaking register and semantic granularity when a style example was provided?
+10. **Scientific fidelity**: Do methods sound procedural, results observational, discussion interpretive, and causal claims calibrated?
 
 ## Quality check
 
