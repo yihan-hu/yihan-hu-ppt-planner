@@ -6,16 +6,17 @@
 2. Presentation contract
 3. Source coverage
 4. Story selection
-5. Example-first concept development
-6. Slide-budget and packing logic
-7. Representation logic
-8. Slide roles
-9. On-slide versus spoken content
-10. User-facing plan format
-11. Main/backup/omit routing
-12. Plan audit
-13. Plan-to-build handoff
-14. Short examples
+5. Story synthesis and closure
+6. Example-first concept development
+7. Slide-budget and packing logic
+8. Representation logic
+9. Slide roles
+10. On-slide versus spoken content
+11. User-facing plan format
+12. Main/backup/omit routing
+13. Plan audit
+14. Plan-to-build handoff
+15. Short examples
 
 ## 1. Purpose
 
@@ -23,11 +24,11 @@ Turn scientific understanding and prioritized evidence into a reviewable slide p
 
 For study presentations, a useful flow is:
 
-`Source -> Study understanding -> Analysis inventory -> Evidence priority -> Scientific claims -> Story -> Storyboard`
+`Source -> Study understanding -> Analysis inventory -> Evidence priority -> Content synthesis -> Story synthesis -> Story closure -> Storyboard`
 
 For teaching or conceptual presentations, a useful flow is:
 
-`Source -> Audience problem -> Concrete example -> Observation/tension -> Concept -> Mechanism -> General rule -> Storyboard`
+`Source -> Audience problem -> Content inventory -> Example/tension -> Story synthesis -> Audience-state check -> Story closure -> Storyboard`
 
 ## 2. Presentation contract
 
@@ -72,7 +73,45 @@ The concept should appear when it answers a question the audience already has, n
 
 For conflict, replication, or sequential-investigation stories, allow tension -> diagnostic analysis -> resolution when the evidence supports it.
 
-## 5. Example-first concept development
+## 5. Story synthesis and closure
+
+Read `references/story-synthesis.md` before drafting the storyboard.
+
+Do not use slide ordering to discover the argument. First build:
+
+`content synthesis -> story synthesis -> story closure`
+
+Only then move to slide planning.
+
+At minimum, establish:
+
+- a lightweight presentation state: core question, audience starting point, desired end state, domain constraints, canonical examples, locked decisions, backup/rejected topics, and important open questions;
+- a content inventory without slide numbers;
+- 3-5 top-level sections with distinct audience questions;
+- argument beats where each beat states what it answers, what it requires, what the audience should know afterward, and what question it creates next;
+- a concept-admission classification of `required`, `supporting`, `backup`, or `omit`;
+- an audience-state check so that a concept is not introduced before the audience has seen the problem or prerequisite that makes it necessary.
+
+Prefer two strong relations for main-path sequencing:
+
+1. **knowledge prerequisite** — B cannot be understood correctly before A;
+2. **question-driven** — A creates the problem or question that B answers.
+
+Do not use thematic adjacency alone as the reason for sequence. `These are all Agent topics` or `these are all epidemiology methods` is not a story.
+
+Before building a slide list, require Story Closure PASS on all of the following:
+
+1. one clear core question or teaching objective;
+2. 3-5 coherent sections with distinct jobs;
+3. every main beat is necessary to the argument;
+4. major concepts appear only after audience prerequisites are established;
+5. each major transition has a defensible `creates -> answers` relation;
+6. obvious `why not just...` alternatives are addressed before the proposed solution;
+7. the ending answers the opening question.
+
+If closure fails, revise the story model rather than patching titles or adding bridge slides.
+
+## 6. Example-first concept development
 
 Read `references/example-first-teaching.md` for teaching, tutorial, methodological, conceptual, and group-meeting talks when the audience may not know the vocabulary.
 
@@ -105,7 +144,7 @@ Allow one concept to take 2-3 slides when useful. For example:
 
 Do not compress these into one dense slide merely to reduce slide count.
 
-## 6. Slide-budget and packing logic
+## 7. Slide-budget and packing logic
 
 Do not allocate slides equally across manuscript sections, source length, or terminology count.
 
@@ -136,7 +175,7 @@ If the first four are yes and the fifth is no, prefer one integrated slide.
 
 Keep items separate when they form distinct narrative beats, especially when one creates an apparent contradiction and a later slide resolves it, or when an example is intentionally used before the concept is named.
 
-## 7. Representation logic
+## 8. Representation logic
 
 Before exact layout, decide the semantic form of each slide.
 
@@ -166,7 +205,7 @@ Then recommend a representation such as diagram, timeline, flowchart, forest plo
 
 Do not specify pixel coordinates, exact dimensions, or detailed visual styling in Plan Mode.
 
-## 8. Slide roles
+## 9. Slide roles
 
 Allow a slide to have one primary role and optional secondary functions.
 
@@ -178,7 +217,7 @@ For conventional academic talks, default visible titles to short neutral labels 
 
 Avoid visible titles that sound like a sales pitch, op-ed, or presenter instruction. Never convert planner-facing metadata into slide copy.
 
-## 9. On-slide versus spoken content
+## 10. On-slide versus spoken content
 
 Plan four layers when useful:
 
@@ -195,13 +234,13 @@ Do not convert every speaking point into slide text. Slides show; notes explain.
 
 For important quantitative result slides, add a compact `model_note` when needed to interpret the estimate.
 
-## 10. User-facing plan format
+## 11. User-facing plan format
 
 Default to a readable plan with these sections. Adapt when the project is simple.
 
 ### A. Presentation strategy
 
-Summarize audience/talk type/duration, core question, core message, and overall architecture. For teaching talks, state whether example-first sequencing is being used and why.
+Summarize audience/talk type/duration, core question, core message, and overall architecture. State the 3-5 top-level sections and the question each section answers. For teaching talks, state whether example-first sequencing is being used and why.
 
 ### B. Study or concept understanding
 
@@ -249,6 +288,7 @@ For each slide, include only relevant fields from:
 - layout freedom;
 - takeaway;
 - transition;
+- optional `answers` / `creates` note when the transition logic is important;
 - backup link.
 
 ### G. Backup plan
@@ -261,7 +301,7 @@ Summarize major checks and unresolved gaps. If speaker notes are included, confi
 
 Keep the output easy to revise with comments such as `merge 5 and 6`, `move this example earlier`, `do not name the concept yet`, `put this in backup`, or `split this into example and explanation`.
 
-## 11. Main/backup/omit routing
+## 12. Main/backup/omit routing
 
 Use `main`, `supporting`, `backup`, or `omit`.
 
@@ -269,7 +309,7 @@ Use `main`, `supporting`, `backup`, or `omit`.
 
 Do not remove an example merely because it is simple if it is doing essential pedagogical work.
 
-## 12. Plan audit
+## 13. Plan audit
 
 ### Scientific/technical understanding
 
@@ -293,8 +333,14 @@ Do not remove an example merely because it is simple if it is doing essential pe
 - Has an example/concept pair been over-compressed into a dense slide?
 - Does each concept end with a memorable general rule or application?
 
-### Narrative
+### Story closure and narrative
 
+- Can the talk be summarized in 3-5 sections with distinct jobs?
+- Does each major beat answer a question or dependency created earlier?
+- Is any main-path adjacency justified only by thematic similarity? If so, re-synthesize the story.
+- Before each major concept, has the audience already seen the problem or prerequisite that makes it necessary?
+- Would the audience reasonably ask `why not just...`? If yes, is that alternative addressed before the proposed solution?
+- Does each major transition have a clear `creates -> answers` relation?
 - Does each slide have one main job?
 - Are Methods placed before evidence that depends on them?
 - Are Results organized around questions/claims rather than manuscript order?
@@ -327,7 +373,17 @@ Do not remove an example merely because it is simple if it is doing essential pe
 - If full speaker notes are included, do they preserve the canonical story and the user's speaking style?
 - Is enough layout freedom preserved for the builder to solve page-fit problems?
 
-## 13. Plan-to-build handoff
+## Replan gate for later feedback
+
+Before editing an existing plan, classify the feedback:
+
+- `local`: wording, one number, one title, local visual density -> patch the affected slide/note;
+- `beat-level`: an example, concept explanation, or local sequence is wrong -> rebuild the beat and its incoming/outgoing transitions;
+- `story-model`: domain constraint, audience model, section role, or overall flow changed -> return to content/story synthesis and re-run Story Closure before editing the storyboard.
+
+Do not keep patching an obsolete storyboard after a story-model change.
+
+## 14. Plan-to-build handoff
 
 After user approval, preserve:
 
@@ -347,7 +403,7 @@ After user approval, preserve:
 
 A later slide-building workflow may re-layout, compress, or split a dense slide for readability but should not silently change scientific meaning, evidence hierarchy, conceptual teaching order, protected examples, conclusion strength, or planner-authored speaker notes.
 
-## 14. Short examples
+## 15. Short examples
 
 ### Example A — Complete manuscript
 
